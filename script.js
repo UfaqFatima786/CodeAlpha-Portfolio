@@ -91,3 +91,21 @@ const observerSkills = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 observerSkills.observe(skillsSection);
+
+const projectCards = document.querySelectorAll(".project-card");
+
+const observerProjects = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+projectCards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(50px)";
+  card.style.transition = "all 1s ease";
+  observerProjects.observe(card);
+});
