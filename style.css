@@ -315,6 +315,7 @@ body {
 .projects-section {
     background: linear-gradient(135deg, #0f0c29, #302b63);
     color: white;
+    border-radius: 50px;
 }
 
 .project-card {
@@ -350,7 +351,108 @@ body {
     border-radius: 20px;
     padding: 6px 15px;
 }
+.contact-section {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    border-radius: 50px;
+}
 
+/* Contact Info */
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #a855f7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #1e1b4b;
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+.footer {
+    background: #0f0c29;
+    padding: 40px 0;
+    color: white;
+    border-radius: 50px;
+}
+
+.footer-name {
+    font-weight: bold;
+    background: linear-gradient(90deg, #a855f7, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    margin: 0 15px;
+    transition: 0.4s;
+}
+
+.social-icons a:hover {
+    color: #a855f7;
+    transform: translateY(-5px);
+}
+
+/* Copyright Text */
+.footer p {
+    font-size: 14px;
+    color: #bbb;
+}
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7, #9333ea, #a855f7);
+    animation: glowLine 3s linear infinite;
+}
+
+@keyframes glowLine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
 /* RESPONSIVE */
 @media(max-width: 900px) {
     .hero {

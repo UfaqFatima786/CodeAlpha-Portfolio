@@ -109,3 +109,10 @@ projectCards.forEach(card => {
   card.style.transition = "all 1s ease";
   observerProjects.observe(card);
 });
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Message sent successfully! 💜");
+  this.reset();
+});
